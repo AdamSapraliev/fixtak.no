@@ -3,67 +3,100 @@
 <html lang="no">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FixTak AS</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 40px;
+            margin: 0;
+            padding: 0;
+            background: #f9f9f9;
+            color: #333;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            background: #fff;
+            border-bottom: 1px solid #ddd;
         }
         header img {
-            max-width: 200px;
+            height: 60px;
+            margin-right: 20px;
         }
-        .content {
-            max-width: 600px;
+        h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        main {
+            padding: 30px;
+        }
+        .section {
+            margin-bottom: 30px;
         }
         form {
-            margin-top: 20px;
-        }
-        label {
-            display: block;
-            margin-top: 10px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
         input, textarea {
             width: 100%;
-            padding: 8px;
-            margin-top: 5px;
+            padding: 10px;
+            margin-top: 8px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
         }
         button {
-            margin-top: 10px;
-            padding: 10px 20px;
+            background-color: #e74c3c;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #c0392b;
         }
     </style>
 </head>
 <body>
     <header>
         <img src="logo.png" alt="FixTak Logo">
-    </header>
-    <div class="content">
         <h1>FixTak AS</h1>
-        <p>Spesialist på myk taktekking – Oslo og omegn</p>
-        <h2>Våre tjenester</h2>
-        <ul>
-            <li>Montering av takpapp, PVC og bitumen</li>
-            <li>Bruk av gassbrennere og moderne teknikker</li>
-            <li>Reparasjon av lekkasjer og vedlikehold</li>
-            <li>Gratis befaring og profesjonell rådgivning</li>
-        </ul>
-        <h2>Kontakt oss</h2>
-        <p>Telefon: +47 465 26 068<br>
-        E-post: <a href="mailto:contact@fixtak.no">contact@fixtak.no</a><br>
-        Adresse: Prestavegen 19C, Åkrehamn</p>
-
-        <form name="contact" method="POST" data-netlify="true" action="thank-you.html">
+    </header>
+    <main>
+        <div class="section">
+            <h2>Spesialist på myk taktekking – Oslo og omegn</h2>
+        </div>
+        <div class="section">
+            <h3>Våre tjenester</h3>
+            <ul>
+                <li>Montering av takpapp, PVC og bitumen</li>
+                <li>Bruk av gassbrennere og moderne teknikker</li>
+                <li>Reparasjon av lekkasjer og vedlikehold</li>
+                <li>Gratis befaring og profesjonell rådgivning</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h3>Kontakt oss</h3>
+            <p>Telefon: +47 465 26 068<br>
+            E-post: <a href="mailto:contact@fixtak.no">contact@fixtak.no</a><br>
+            Adresse: Prestavegen 19C, Åkrehamn</p>
+        </div>
+        <form action="https://formspree.io/f/your_form_id" method="POST">
             <label for="name">Navn:</label>
-            <input type="text" name="name" required>
+            <input type="text" id="name" name="name" required>
 
             <label for="email">E-post:</label>
-            <input type="email" name="email" required>
+            <input type="email" id="email" name="_replyto" required>
 
             <label for="message">Melding:</label>
-            <textarea name="message" required></textarea>
+            <textarea id="message" name="message" rows="5" required></textarea>
 
             <button type="submit">Send</button>
         </form>
-    </div>
+    </main>
 </body>
 </html>
