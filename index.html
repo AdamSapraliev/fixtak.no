@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <title>FixTak AS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header img {
+            max-width: 150px;
+            height: auto;
+        }
+        form {
+            margin-top: 20px;
+        }
+        input, textarea {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="FixTak Logo">
+    </header>
+    <h1>FixTak AS</h1>
+    <p>Spesialist på myk taktekking – Oslo og omegn</p>
+
+    <h2>Våre tjenester</h2>
+    <ul>
+        <li>Montering av takpapp, PVC og bitumen</li>
+        <li>Bruk av gassbrennere og moderne teknikker</li>
+        <li>Reparasjon av lekkasjer og vedlikehold</li>
+        <li>Gratis befaring og profesjonell rådgivning</li>
+    </ul>
+
+    <h3>Kontakt oss</h3>
+    <p>Telefon: +47 465 26 068<br>
+    E-post: <a href="mailto:contact@fixtak.no">contact@fixtak.no</a><br>
+    Adresse: Prestavegen 19C, Åkrehamn</p>
+
+    <form action="https://formspree.io/f/mzzrvlel" method="POST">
+        <input type="text" name="name" placeholder="Navn:" required>
+        <input type="email" name="email" placeholder="E-post:" required>
+        <textarea name="message" placeholder="Melding:" rows="5" required></textarea>
+        <button type="submit">Send</button>
+    </form>
+</body>
+</html>
