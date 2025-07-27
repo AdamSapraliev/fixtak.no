@@ -1,64 +1,188 @@
-
 <!DOCTYPE html>
 <html lang="no">
 <head>
-    <meta charset="UTF-8">
-    <title>FixTak AS</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: auto;
-            padding: 20px;
-        }
-        h1, h2 {
-            color: #333;
-        }
-        form {
-            margin-top: 20px;
-        }
-        label {
-            display: block;
-            margin-top: 10px;
-        }
-        input, textarea {
-            width: 100%;
-            padding: 8px;
-            margin-top: 5px;
-        }
-        button {
-            margin-top: 10px;
-            padding: 10px 15px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FixTak AS – Taktekking i toppklasse</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: sans-serif;
+      line-height: 1.6;
+      color: #222;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    header {
+      background: #111;
+      color: #fff;
+      padding: 15px 0;
+    }
+
+    header h1 {
+      float: left;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: flex-end;
+      gap: 15px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    nav a.btn {
+      background: #f90;
+      padding: 8px 15px;
+      border-radius: 5px;
+      color: #000;
+    }
+
+    .hero {
+      background: #eee;
+      padding: 80px 0;
+      text-align: center;
+    }
+
+    .tjenester ul {
+      list-style: none;
+      margin-top: 20px;
+    }
+
+    .tjenester li {
+      margin-bottom: 10px;
+    }
+
+    .prosjekter .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .prosjekter img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 5px;
+    }
+
+    .kontakt form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .kontakt input,
+    .kontakt textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .kontakt button {
+      background: #111;
+      color: #fff;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+    }
+
+    footer {
+      background: #111;
+      color: #aaa;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .prosjekter .gallery {
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
 <body>
-    <h1>FixTak AS</h1>
-    <p>Spesialist på myk taktekking – Oslo og omegn</p>
-    <h2>Våre tjenester</h2>
-    <ul>
-        <li>Montering av takpapp, PVC og bitumen</li>
-        <li>Bruk av gassbrennere og moderne teknikker</li>
-        <li>Reparasjon av lekkasjer og vedlikehold</li>
-        <li>Gratis befaring og profesjonell rådgivning</li>
-    </ul>
+  <header>
+    <div class="container">
+      <h1>FixTak AS</h1>
+      <nav>
+        <ul>
+          <li><a href="#tjenester">Tjenester</a></li>
+          <li><a href="#prosjekter">Prosjekter</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+          <li><a href="#kontakt" class="btn">Få tilbud</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <h2>Kontakt oss</h2>
-    <p>Telefon: +47 465 26 068<br>
-    E-post: <a href="mailto:contact@fixtak.no">contact@fixtak.no</a><br>
-    Adresse: Prestavegen 19C, Åkrehamn</p>
+  <section class="hero">
+    <div class="container">
+      <h2>Pålitelig taktekking i hele Haugalandet</h2>
+      <p>Profesjonell legging av myk takpapp, membraner og isolasjon</p>
+    </div>
+  </section>
 
-    <form action="https://formspree.io/f/mzzrvlel?redirect=https://fixtak.no/thank-you.html" method="POST">
-        <label>Navn:
-            <input type="text" name="name" required>
-        </label>
-        <label>E-post:
-            <input type="email" name="email" required>
-        </label>
-        <label>Melding:
-            <textarea name="message" required></textarea>
-        </label>
-        <button type="submit">Send</button>
-    </form>
+  <section id="tjenester" class="tjenester">
+    <div class="container">
+      <h2>Våre tjenester</h2>
+      <ul>
+        <li>✔ Legging av myk takpapp (SBS, PVC)</li>
+        <li>✔ Rehabilitering av flate tak</li>
+        <li>✔ Tekking med membran</li>
+        <li>✔ Isolering og dampsperre</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="prosjekter" class="prosjekter">
+    <div class="container">
+      <h2>Utvalgte prosjekter</h2>
+      <div class="gallery">
+        <img src="img/project1.jpg" alt="Tak før" />
+        <img src="img/project2.jpg" alt="Tak etter" />
+        <img src="img/project3.jpg" alt="Membrantekking" />
+      </div>
+    </div>
+  </section>
+
+  <section id="kontakt" class="kontakt">
+    <div class="container">
+      <h2>Kontakt oss</h2>
+      <form>
+        <input type="text" placeholder="Navn" required />
+        <input type="tel" placeholder="Telefon" required />
+        <input type="email" placeholder="E-post" required />
+        <textarea placeholder="Melding" required></textarea>
+        <button type="submit">Send melding</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 FixTak AS – Org.nr 931 XXX XXX – Alle rettigheter reservert</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
